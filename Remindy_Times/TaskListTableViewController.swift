@@ -16,64 +16,68 @@ class TaskListTableViewController: UITableViewController {
     super.init(coder: aDecoder)
     
     let rowItem0 = TaskListItem()
-    rowItem0.text = "Walk the dog"
-    rowItem0.checked = false
+    rowItem0.text = "Practice the codey times"
+    rowItem0.checked = true
     tasks.append(rowItem0)
     
     let rowItem1 = TaskListItem()
-    rowItem1.text = "Brush my teeth"
+    rowItem1.text = "Roll out my calves"
     rowItem1.checked = true
     tasks.append(rowItem1)
     
     let rowItem2 = TaskListItem()
-    rowItem2.text = "Learn iOS development"
+    rowItem2.text = "Go for a run"
     rowItem2.checked = true
     tasks.append(rowItem2)
     
     let rowItem3 = TaskListItem()
-    rowItem3.text = "Soccer practice"
-    rowItem3.checked = false
+    rowItem3.text = "Call Good to Go"
+    rowItem3.checked = true
     tasks.append(rowItem3)
     
    let rowItem4 = TaskListItem()
-    rowItem4.text = "Whatever"
+    rowItem4.text = "Email the wedding DJ"
     rowItem4.checked = false
     tasks.append(rowItem4)
     
   }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-      tableView.rowHeight = 44
-    }
+  override func viewDidLoad() {
+      super.viewDidLoad()
+    tableView.rowHeight = 44
+  }
 
-     override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+  override func didReceiveMemoryWarning() {
+      super.didReceiveMemoryWarning()
+      // Dispose of any resources that can be recreated.
+  }
     
-    func configureCheckmarkForCell(cell : UITableViewCell, withTaskListItem task : TaskListItem) {
+  func configureCheckmarkForCell(cell: UITableViewCell, withTaskListItem task: TaskListItem) {
  
-      if task.checked {
+    if task.checked {
         cell.accessoryType = .Checkmark
-      } else {
-        cell.accessoryType = .None
-      }
+    } else {
+      cell.accessoryType = .None
     }
+  }
+  
+  func configureTextForCell(cell: UITableViewCell, withTaskListItem task: TaskListItem) {
+    let label = cell.viewWithTag(29) as! UILabel
+    label.text = task.text
+  }
 
-    // MARK: Table view data source
+  // MARK: Table view data source
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.tasks.count
-    }
+  override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return self.tasks.count
+  }
 
-   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+  override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier("TASK_CELL", forIndexPath: indexPath) as! UITableViewCell
     
     let task = tasks[indexPath.row]
-    let label = cell.viewWithTag(29) as! UILabel
-    label.text = task.text
-  
+
+    configureTextForCell(cell, withTaskListItem: task)
     configureCheckmarkForCell(cell, withTaskListItem: task)
     
     return cell
