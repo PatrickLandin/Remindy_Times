@@ -12,4 +12,8 @@ class TaskListItem {
   var text = ""
   var checked = false
   
+  func toggleChecked() {
+    self.checked = !self.checked
+  }
+  
 }
