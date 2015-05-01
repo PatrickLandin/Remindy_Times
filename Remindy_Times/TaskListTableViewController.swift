@@ -15,7 +15,6 @@ class TaskListTableViewController: UITableViewController {
   required init(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
     
-
     let rowItem0 = TaskListItem()
     rowItem0.text = "Walk the dog"
     rowItem0.checked = false
@@ -60,7 +59,6 @@ class TaskListTableViewController: UITableViewController {
       } else {
         cell.accessoryType = .None
       }
-    
     }
 
     // MARK: Table view data source
