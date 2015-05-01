@@ -14,6 +14,7 @@
 		ECE558931AF2CBE600062837 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECE558911AF2CBE600062837 /* LaunchScreen.xib */; };
 		ECE5589F1AF2CBE600062837 /* Remindy_TimesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE5589E1AF2CBE600062837 /* Remindy_TimesTests.swift */; };
 		ECE558A91AF2CC2000062837 /* TaskListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE558A81AF2CC2000062837 /* TaskListTableViewController.swift */; };
+		ECE558AB1AF3F9A700062837 /* TaskListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE558AA1AF3F9A700062837 /* TaskListItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		ECE5589D1AF2CBE600062837 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECE5589E1AF2CBE600062837 /* Remindy_TimesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Remindy_TimesTests.swift; sourceTree = "<group>"; };
 		ECE558A81AF2CC2000062837 /* TaskListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskListTableViewController.swift; sourceTree = "<group>"; };
+		ECE558AA1AF3F9A700062837 /* TaskListItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskListItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				ECE558881AF2CBE600062837 /* AppDelegate.swift */,
 				ECE5588A1AF2CBE600062837 /* ViewController.swift */,
 				ECE558A81AF2CC2000062837 /* TaskListTableViewController.swift */,
+				ECE558AA1AF3F9A700062837 /* TaskListItem.swift */,
 				ECE5588C1AF2CBE600062837 /* Main.storyboard */,
 				ECE5588F1AF2CBE600062837 /* Images.xcassets */,
 				ECE558911AF2CBE600062837 /* LaunchScreen.xib */,
@@ -218,6 +221,7 @@
 				ECE558A91AF2CC2000062837 /* TaskListTableViewController.swift in Sources */,
 				ECE5588B1AF2CBE600062837 /* ViewController.swift in Sources */,
 				ECE558891AF2CBE600062837 /* AppDelegate.swift in Sources */,
+				ECE558AB1AF3F9A700062837 /* TaskListItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
