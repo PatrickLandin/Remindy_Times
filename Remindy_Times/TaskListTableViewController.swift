@@ -107,4 +107,12 @@ class TaskListTableViewController: UITableViewController {
     tableView.deselectRowAtIndexPath(indexPath, animated: true)
   }
   
+  override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+    
+    tasks.removeAtIndex(indexPath.row)
+    
+    let indexPaths = [indexPath]
+    tableView.deleteRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
+  }
+  
 }
