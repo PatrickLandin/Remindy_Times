@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC149F251AFD53C400F1EB25 /* AddTaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC149F241AFD53C400F1EB25 /* AddTaskTableViewController.swift */; };
 		ECE558891AF2CBE600062837 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE558881AF2CBE600062837 /* AppDelegate.swift */; };
 		ECE5588B1AF2CBE600062837 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE5588A1AF2CBE600062837 /* ViewController.swift */; };
 		ECE5588E1AF2CBE600062837 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECE5588C1AF2CBE600062837 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EC149F241AFD53C400F1EB25 /* AddTaskTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskTableViewController.swift; sourceTree = "<group>"; };
 		ECE558831AF2CBE600062837 /* Remindy_Times.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Remindy_Times.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECE558871AF2CBE600062837 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECE558881AF2CBE600062837 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EC149F261AFD53E100F1EB25 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ECE558AA1AF3F9A700062837 /* TaskListItem.swift */,
+				ECE558881AF2CBE600062837 /* AppDelegate.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		EC149F271AFD53E700F1EB25 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ECE5588C1AF2CBE600062837 /* Main.storyboard */,
+				ECE558911AF2CBE600062837 /* LaunchScreen.xib */,
+				ECE5588F1AF2CBE600062837 /* Images.xcassets */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		EC149F281AFD53ED00F1EB25 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ECE558A81AF2CC2000062837 /* TaskListTableViewController.swift */,
+				EC149F241AFD53C400F1EB25 /* AddTaskTableViewController.swift */,
+				ECE5588A1AF2CBE600062837 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		ECE5587A1AF2CBE600062837 = {
 			isa = PBXGroup;
 			children = (
@@ -81,13 +112,9 @@
 		ECE558851AF2CBE600062837 /* Remindy_Times */ = {
 			isa = PBXGroup;
 			children = (
-				ECE558881AF2CBE600062837 /* AppDelegate.swift */,
-				ECE5588A1AF2CBE600062837 /* ViewController.swift */,
-				ECE558A81AF2CC2000062837 /* TaskListTableViewController.swift */,
-				ECE558AA1AF3F9A700062837 /* TaskListItem.swift */,
-				ECE5588C1AF2CBE600062837 /* Main.storyboard */,
-				ECE5588F1AF2CBE600062837 /* Images.xcassets */,
-				ECE558911AF2CBE600062837 /* LaunchScreen.xib */,
+				EC149F261AFD53E100F1EB25 /* Model */,
+				EC149F271AFD53E700F1EB25 /* View */,
+				EC149F281AFD53ED00F1EB25 /* Controller */,
 				ECE558861AF2CBE600062837 /* Supporting Files */,
 			);
 			path = Remindy_Times;
@@ -222,6 +249,7 @@
 				ECE5588B1AF2CBE600062837 /* ViewController.swift in Sources */,
 				ECE558891AF2CBE600062837 /* AppDelegate.swift in Sources */,
 				ECE558AB1AF3F9A700062837 /* TaskListItem.swift in Sources */,
+				EC149F251AFD53C400F1EB25 /* AddTaskTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +447,7 @@
 				ECE558A41AF2CBE600062837 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ECE558A51AF2CBE600062837 /* Build configuration list for PBXNativeTarget "Remindy_TimesTests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +456,7 @@
 				ECE558A71AF2CBE600062837 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -44,9 +44,11 @@ class TaskListTableViewController: UITableViewController {
 
   override func viewDidLoad() {
       super.viewDidLoad()
-    navigationItem.title = "Task List"
-    tableView.rowHeight = 44
-  }
+    
+    self.navigationItem.title = "Task List"
+    self.tableView.rowHeight = 44
+    
+  } // viewDidLoad
 
   override func didReceiveMemoryWarning() {
       super.didReceiveMemoryWarning()
