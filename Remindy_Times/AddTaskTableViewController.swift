@@ -8,10 +8,21 @@
 
 import UIKit
 
+protocol AddTaskTableViewControllerDelegate : class {
+  func addTaskTableViewControllerDidCancel(controller: AddTaskTableViewController)
+  func addTaskTableViewController(controller: AddTaskTableViewController, didFinishAddingTask task: TaskListItem)
+}
+
 class AddTaskTableViewController: UITableViewController, UITextFieldDelegate {
 
   @IBOutlet weak var addTaskTextField: UITextField!
   @IBOutlet weak var doneBarButtonItem: UIBarButtonItem!
+  
+  weak var delegate : AddTaskTableViewControllerDelegate?
+  
+  required init!(coder aDecoder: NSCoder!) {
+    super.init(coder: aDecoder)
+  }
   
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
