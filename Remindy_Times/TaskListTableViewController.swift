@@ -21,7 +21,7 @@ class TaskListTableViewController: UITableViewController {
     tasks.append(rowItem0)
     
     let rowItem1 = TaskListItem()
-    rowItem1.text = "Roll out my calves ands knee"
+    rowItem1.text = "Roll out my calves and knee"
     rowItem1.checked = false
     tasks.append(rowItem1)
     
@@ -31,13 +31,13 @@ class TaskListTableViewController: UITableViewController {
     tasks.append(rowItem2)
     
     let rowItem3 = TaskListItem()
-    rowItem3.text = "Notorize marriage application"
+    rowItem3.text = "Get married"
     rowItem3.checked = true
     tasks.append(rowItem3)
     
-   let rowItem4 = TaskListItem()
+    let rowItem4 = TaskListItem()
     rowItem4.text = "Buy shirts, ties, and socks"
-    rowItem4.checked = false
+    rowItem4.checked = true
     tasks.append(rowItem4)
     
   }

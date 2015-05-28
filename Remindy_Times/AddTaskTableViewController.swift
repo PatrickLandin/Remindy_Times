@@ -8,12 +8,21 @@
 
 import UIKit
 
-class AddTaskTableViewController: UITableViewController {
+class AddTaskTableViewController: UITableViewController, UITextFieldDelegate {
 
+  @IBOutlet weak var addTaskTextField: UITextField!
+  @IBOutlet weak var doneBarButtonItem: UIBarButtonItem!
+  
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+    addTaskTextField.becomeFirstResponder()
+  }
+  
   override func viewDidLoad() {
       super.viewDidLoad()
       
-    self.navigationItem.title = "Add Item"
+    self.navigationItem.title = "Add Task"
+    self.addTaskTextField.delegate = self
 
   } // viewDidLoad
 
@@ -27,10 +36,23 @@ class AddTaskTableViewController: UITableViewController {
     dismissViewControllerAnimated(true, completion: nil)
   }
   
-  @IBAction func doneButtonPressed(sender: UIBarButtonItem) {
+  
+  @IBAction func doneButtonPressed(sender: AnyObject) {
+    
+    println("add task text: \(addTaskTextField.text)")
     
     dismissViewControllerAnimated(true, completion: nil)
   }
+  
+  func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+    let oldText : NSString = textField.text
+    let newText : NSString = oldText.stringByReplacingCharactersInRange(range, withString: string)
+    
+    self.doneBarButtonItem.enabled = newText.length > 0
+    
+    return true
+  }
+  
   
   override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
     return nil
