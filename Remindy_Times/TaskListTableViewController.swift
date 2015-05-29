@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TaskListTableViewController: UITableViewController {
+class TaskListTableViewController: UITableViewController, AddTaskTableViewControllerDelegate {
   
   var tasks = [TaskListItem]()
   
@@ -53,6 +53,14 @@ class TaskListTableViewController: UITableViewController {
   override func didReceiveMemoryWarning() {
       super.didReceiveMemoryWarning()
       // Dispose of any resources that can be recreated.
+  }
+  
+  func addTaskTableViewController(controller: AddTaskTableViewController, didFinishAddingTask task: TaskListItem) {
+    dismissViewControllerAnimated(true, completion: nil)
+  }
+  
+  func addTaskTableViewControllerDidCancel(controller: AddTaskTableViewController) {
+    dismissViewControllerAnimated(true, completion: nil)
   }
     
   @IBAction func addTaskPressed(sender: UIBarButtonItem) {
@@ -115,6 +123,14 @@ class TaskListTableViewController: UITableViewController {
     
     let indexPaths = [indexPath]
     tableView.deleteRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
+  }
+  
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == "SHOW_ADD_TASK" {
+      let navigationController = segue.destinationViewController as! UINavigationController
+      let destinationController = navigationController.topViewController as! AddTaskTableViewController
+      destinationController.delegate = self
+    }
   }
   
 }

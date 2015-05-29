@@ -91,7 +91,7 @@
                     <navigationItem key="navigationItem" id="0Tk-6E-jm3">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="mOW-uv-irK">
                             <connections>
-                                <action selector="cancelButtonPressed:" destination="LBA-ZP-aBB" id="77e-QD-kYo"/>
+                                <action selector="cancelButtonPressed:" destination="LBA-ZP-aBB" id="jOO-OM-rQ0"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="done" id="0mM-EE-7wz">

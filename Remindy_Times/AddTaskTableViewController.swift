@@ -42,17 +42,20 @@ class AddTaskTableViewController: UITableViewController, UITextFieldDelegate {
       // Dispose of any resources that can be recreated.
   }
   
-  @IBAction func cancelButtonPressed(sender: UIBarButtonItem) {
+  @IBAction func cancelButtonPressed(sender: AnyObject) {
     
-    dismissViewControllerAnimated(true, completion: nil)
+    delegate?.addTaskTableViewControllerDidCancel(self)
   }
-  
   
   @IBAction func doneButtonPressed(sender: AnyObject) {
     
     println("add task text: \(addTaskTextField.text)")
     
-    dismissViewControllerAnimated(true, completion: nil)
+    let task = TaskListItem()
+    task.text = addTaskTextField.text
+    task.checked = false
+    
+    delegate?.addTaskTableViewController(self, didFinishAddingTask: task)
   }
   
   func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
